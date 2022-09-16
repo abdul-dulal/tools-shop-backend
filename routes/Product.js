@@ -7,6 +7,7 @@ const Product = mongoose.model("Products", proudctSchema);
 // post a single product
 
 router.post("/post", async (req, res) => {
+  console.log(req.body);
   const newProduct = Product(req.body);
   try {
     await newProduct.save();
@@ -45,9 +46,9 @@ router.get("/flash-deals", async (req, res) => {
 // purchase
 
 router.get("/purchase/:id", async (req, res) => {
-  const id = req.params.id;
+  console.log(req.params.id);
   try {
-    const purchaseProduct = await Product.findOne({ id });
+    const purchaseProduct = await Product.findOne({ _id: req.params.id });
     res.send(purchaseProduct);
   } catch (err) {
     res.json({

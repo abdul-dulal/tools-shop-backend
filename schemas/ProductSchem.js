@@ -13,19 +13,21 @@ const proudctSchema = Schema({
   },
   category: {
     type: String,
-    required: true,
   },
   img: {
     type: String,
     required: true,
   },
   quantity: {
-    type: Number,
+    type: String,
     required: true,
   },
+  description: {
+    type: String,
+  },
 
-  minQuantity: {
-    type: Number,
+  miniumqnt: {
+    type: String,
     required: true,
   },
 });
