@@ -7,7 +7,6 @@ const Product = mongoose.model("Products", proudctSchema);
 // post a single product
 
 router.post("/post", async (req, res) => {
-  console.log(req.body);
   const newProduct = Product(req.body);
   try {
     await newProduct.save();
