@@ -43,6 +43,17 @@ router.get("/flash-deals", async (req, res) => {
     });
   }
 });
+
+router.get("/allProduct", async (req, res) => {
+  try {
+    const data = await Product.find({});
+    res.send(data);
+  } catch (err) {
+    res.json({
+      message: err.message,
+    });
+  }
+});
 // purchase
 
 router.get("/purchase/:id", async (req, res) => {
