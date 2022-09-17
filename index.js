@@ -29,7 +29,7 @@ app.use("/review", handleReview);
 app.use("/order", hanldeOrder);
 
 app.get("/", (req, res) => {
-  res.send("hello from Tools-Shop2");
+  res.send("hello from Tools-Shop");
 });
 
 app.listen(port, () => {
