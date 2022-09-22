@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const userSchema = Schema({
-  user: {
+  email: {
     type: String,
     required: true,
   },
-  passwor: {
+  role: {
+    type: String,
+  },
+  password: {
     type: String,
     required: true,
   },

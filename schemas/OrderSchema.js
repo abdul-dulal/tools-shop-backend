@@ -19,6 +19,12 @@ const orderSchema = Schema({
     type: Number,
     required: true,
   },
+  paid: {
+    type: Boolean,
+  },
+  transactionId: {
+    type: String,
+  },
 });
 
 module.exports = orderSchema;
